@@ -1,0 +1,15 @@
+.btn-group {
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin-bottom: 10px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
