@@ -1,16 +1,51 @@
 <div class="container">
   <div class="top-bar">
-    <img src="assets/images/logos/sort-logo.png" alt="">
+    <img src="assets/images/logos/sort-logo.png" alt="" />
 
     <div class="btn-group me-2" role="group" aria-label="First group">
-      <button type="button" (click)="completeSort()" class="btn btn-secondary" title="Sort by town, then street name, street number, property name and then by apartment number">
+      <button
+        type="button"
+        (click)="completeSort()"
+        class="btn btn-secondary"
+        title="Sort by town, then street name, street number, property name and then by apartment number"
+      >
         Full Sort
       </button>
-      <button type="button" (click)="addresses.sort(sortByTown)" class="btn btn-secondary">Sort By Town</button>
-      <button type="button" (click)="addresses.sort(sortByStreetNumber)" class="btn btn-secondary">Sort By Street Number</button>
-      <button type="button" (click)="addresses.sort(sortByStreetName)" class="btn btn-secondary">Sort By Street Name</button>
-      <button type="button" (click)="addresses.sort(sortByBuildingName)" class="btn btn-secondary">Sort By Building Name</button>
-      <button type="button" (click)="addresses.sort(sortByApartmentNumber)" class="btn btn-secondary">Sort By Apartment Number</button>
+      <button
+        type="button"
+        (click)="addresses.sort(sortByTown)"
+        class="btn btn-secondary"
+      >
+        Sort By Town
+      </button>
+      <button
+        type="button"
+        (click)="addresses.sort(sortByStreetNumber)"
+        class="btn btn-secondary"
+      >
+        Sort By Street Number
+      </button>
+      <button
+        type="button"
+        (click)="addresses.sort(sortByStreetName)"
+        class="btn btn-secondary"
+      >
+        Sort By Street Name
+      </button>
+      <button
+        type="button"
+        (click)="addresses.sort(sortByBuildingName)"
+        class="btn btn-secondary"
+      >
+        Sort By Building Name
+      </button>
+      <button
+        type="button"
+        (click)="addresses.sort(sortByApartmentNumber)"
+        class="btn btn-secondary"
+      >
+        Sort By Apartment Number
+      </button>
     </div>
   </div>
   <div class="col">
@@ -18,10 +53,16 @@
       <div class="card" *ngFor="let address of addresses">
         <div class="card-body">
           <p class="card-text">Street Address: {{ address.fullStreetName }}</p>
-          <p class="card-text" *ngIf="address.fullApartmentName">Apartment: {{ address.fullApartmentName }}</p>
-          <p class="card-text" *ngIf="address.buildingName">Building: {{ address.buildingName }}</p>
+          <p class="card-text" *ngIf="address.fullApartmentName">
+            Apartment: {{ address.fullApartmentName }}
+          </p>
+          <p class="card-text" *ngIf="address.buildingName">
+            Building: {{ address.buildingName }}
+          </p>
           <p class="card-text">Town: {{ address.town }}</p>
-          <p class="card-text" *ngIf="address.county">County: {{ address.county }}</p>
+          <p class="card-text" *ngIf="address.county">
+            County: {{ address.county }}
+          </p>
           <p class="card-text">Postcode: {{ address.postCode }}</p>
         </div>
       </div>
